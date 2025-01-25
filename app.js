@@ -9,7 +9,7 @@ function exibirTextoNaTela(tag, texto) {
     if ('speechSynthesis' in window) {
         let utterance = new SpeechSynthesisUtterance(texto);
         utterance.lang = 'pt-BR'; 
-        utterance.rate = 1.8; 
+        utterance.rate = 1.7; 
         window.speechSynthesis.speak(utterance); 
     } else {
         console.log("Web Speech API não suportada neste navegador.");
@@ -18,7 +18,7 @@ function exibirTextoNaTela(tag, texto) {
 
 function exibirMensagemInicial() {
     exibirTextoNaTela('h1', 'Bem vindo ao Jogo do número secreto');
-    exibirTextoNaTela('p', 'Escolha um número entre 1 e 10');
+    exibirTextoNaTela('p', 'Escolha um número entre 1 e 35');
 }
 
 exibirMensagemInicial();
